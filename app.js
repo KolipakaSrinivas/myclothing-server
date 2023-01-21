@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
-const router = require('./router/api-router')
+const apiRouter = require('./router/api-router')
 
 
 
@@ -12,9 +12,7 @@ const MONGODB_URI = "mongodb://127.0.0.1:27017/myclothing";
 //components
 // const apiRouter = require("./app/router/api-router");
 
-// app.get('/',(req,res)=>{
-    //   res.send("Hello Srinivas")
-    // })
+
     
     app.use(cors());
     app.use(express.json());
@@ -24,7 +22,7 @@ const MONGODB_URI = "mongodb://127.0.0.1:27017/myclothing";
         res.send("Hello Srinivas")
     })
     
-app.use("/api",router);
+app.use("/api",apiRouter);
 
 mongoose
   .connect(MONGODB_URI)                  /*  process.env.MONGODB_URI*/

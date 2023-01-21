@@ -1,7 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-const shop_data = require('../controller/ShopData-controller')
+
+const shopdad = require('../controller/ShopData-controller')
 
 
-router.get('/shopdata',shop_data.shop_data)
+
+
+
+router.get('/get-shop-data',shopdad.getshopdata)
+
+
+module.exports = router;

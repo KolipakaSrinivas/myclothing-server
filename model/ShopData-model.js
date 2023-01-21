@@ -14,6 +14,6 @@ const categorySchema = new mongoose.Schema({
   items: [itemSchema]
 });
 
-const shopData = mongoose.model('Category', categorySchema);
+const shopData = mongoose.model('shopdata', categorySchema);
 
 module.exports = shopData
